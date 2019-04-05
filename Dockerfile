@@ -9,9 +9,12 @@ RUN apt-get update -y && \
       wget \
       rsync \
       mc \
-      htop \
+      htop
+
+RUN   DEBIAN_FRONTEND=noninteractive apt-get install -y \
       openssh-server \
-      pigz
+      pigz \
+      screen
 
 # Install guppy related stuff
 RUN apt-get install -y \
