@@ -29,7 +29,8 @@ RUN apt-get install -y \
       libboost-chrono1.58.0 \
       libboost-date-time1.58.0 \
       libboost-filesystem1.58.0 \
-      libboost-program-options1.58.0
+      libboost-program-options1.58.0 \
+      libboost-iostreams1.58.0
 
 # Install guppy
 # RUN wget -q https://mirror.oxfordnanoportal.com/software/analysis/ont_guppy_2.3.7-1~xenial_amd64.deb
