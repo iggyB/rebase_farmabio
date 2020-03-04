@@ -1,6 +1,8 @@
-FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
+FROM nvidia/cuda:10.2-devel-ubuntu16.04
 
 ENV SHELL=/bin/bash
+
+ARG PACKAGE_VERSION=3.4.5
 
 # Install linux stuff
 RUN apt-get update -y && \
@@ -33,10 +35,6 @@ RUN apt-get install -y \
       libboost-iostreams1.58.0
 
 # Install guppy
-# RUN wget -q https://mirror.oxfordnanoportal.com/software/analysis/ont_guppy_2.3.7-1~xenial_amd64.deb
-# New version 3.0.3
-# RUN wget -q https://mirror.oxfordnanoportal.com/software/analysis/ont_guppy_3.0.3-1~xenial_amd64.deb
-# New version 3.1.5
-RUN wget -q https://mirror.oxfordnanoportal.com/software/analysis/ont_guppy_3.1.5-1~xenial_amd64.deb
-RUN dpkg -i --ignore-depends=nvidia-384,libcuda1-384 ont_guppy_3.1.5-1~xenial_amd64.deb
+RUN wget -q https://mirror.oxfordnanoportal.com/software/analysis/ont_guppy_${PACKAGE_VERSION}-1~xenial_amd64.deb
+RUN dpkg -i --ignore-depends=nvidia-384,libcuda1-384 ont_guppy_${PACKAGE_VERSION}-1~xenial_amd64.deb
 
