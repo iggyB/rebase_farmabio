@@ -2,7 +2,7 @@ FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
 
 ENV SHELL=/bin/bash
 
-ARG PACKAGE_VERSION=3.4.5
+ARG PACKAGE_VERSION=3.5.1
 
 # Install linux stuff
 RUN apt-get update -y && \
@@ -11,7 +11,8 @@ RUN apt-get update -y && \
       wget \
       rsync \
       mc \
-      htop
+      htop \
+      nano
 
 RUN   DEBIAN_FRONTEND=noninteractive apt-get install -y \
       openssh-server \
