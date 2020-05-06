@@ -2,7 +2,7 @@ FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
 
 ENV SHELL=/bin/bash
 
-ARG PACKAGE_VERSION=3.5.1
+ARG PACKAGE_VERSION=3.6.0
 
 # Install linux stuff
 RUN apt-get update -y && \
@@ -12,9 +12,7 @@ RUN apt-get update -y && \
       rsync \
       mc \
       htop \
-      nano
-
-RUN   DEBIAN_FRONTEND=noninteractive apt-get install -y \
+      nano \
       openssh-server \
       pigz \
       screen
@@ -33,6 +31,7 @@ RUN apt-get install -y \
       libboost-date-time1.58.0 \
       libboost-filesystem1.58.0 \
       libboost-program-options1.58.0 \
+      libboost-system1.58.0 \
       libboost-iostreams1.58.0
 
 # Install guppy
