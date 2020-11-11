@@ -2,7 +2,7 @@ FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
 
 ENV SHELL=/bin/bash
 
-ARG PACKAGE_VERSION=3.6.0
+ARG PACKAGE_VERSION=4.2.2
 
 # Install linux stuff
 RUN apt-get update -y && \
