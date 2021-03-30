@@ -2,11 +2,12 @@ FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
 
 ENV SHELL=/bin/bash
 
-ARG PACKAGE_VERSION=4.4.2
+ARG PACKAGE_VERSION=4.5.2
+ARG DEBIAN_FRONTEND=noninteractive
 
 # Install linux stuff
 RUN apt-get update -y && \
-      DEBIAN_FRONTEND=noninteractive apt-get install -y \
+      apt-get install -y \
       tmux \
       wget \
       rsync \
