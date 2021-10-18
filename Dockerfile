@@ -2,7 +2,7 @@ FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
 
 ENV SHELL=/bin/bash
 
-ARG PACKAGE_VERSION=4.5.2
+ARG PACKAGE_VERSION=5.0.16
 ARG DEBIAN_FRONTEND=noninteractive
 
 # Install linux stuff
